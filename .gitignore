@@ -8,9 +8,7 @@ npm-debug.*
 dist/
 css
 app/js/main.min.js
-app/images/*
-!/accomodate
-app/fonts/*
-!/accomodate
+app/images/accomodate
+app/fonts/accomodate
 node_modules/
 package-lock.json
