@@ -34,7 +34,7 @@ function pages() {
         .pipe(include({
             includePaths: 'app/layouts/'
         }))
-        .pipe(htmlmin({ collapseWhitespace: true }))
+        // .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(rename(function (path) {
             path.basename = path.basename.replace(".dev", "");
             path.extname = ".html";
@@ -58,7 +58,7 @@ function styles() {
 function scripts() {
     return src('app/js/accomodate/**/*.js')
         .pipe(rigger())
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(rename({
             suffix: ".min",
             extname: ".js"

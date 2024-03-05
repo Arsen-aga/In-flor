@@ -1,22 +1,27 @@
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.body_wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-main {
-    flex-grow: 1;
+.main {
+  flex-grow: 1;
 }
 
-.container{
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 15px;
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.title-bold {
+  @extend %roboto-700;
+  font-size: 52px;
+}
+
+.title {
+  font-size: 33px;
+  line-height: 1.35;
+  margin-bottom: 45px;
 }
 
