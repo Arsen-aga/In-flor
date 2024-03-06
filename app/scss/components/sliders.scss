@@ -1,0 +1,48 @@
+.slider {
+  max-width: 1092px;
+  margin: 0 auto;
+
+  &__slide-item {
+    box-shadow: $shadow;
+    border-radius: 3px;
+    margin: 5px 21px;
+    position: relative;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    font-size: 0;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+
+  .slick-arrow::before {
+    position: absolute;
+    content: '';
+    width: 44px;
+    height: 44px;
+    top: 0;
+    transform: translateY(-50%);
+    background-image: url('../images/icons/arrow-d.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .3s;
+  }
+
+  .slick-arrow:hover::before {
+    background-image: url('../images/icons/arrow.svg');
+    background-color: $accent;
+  }
+
+  .slick-prev {
+    left: -10px;
+    transform: rotate(180deg);
+  }
+
+  .slick-next {
+    left: auto;
+    right: -10px;
+  }
+}

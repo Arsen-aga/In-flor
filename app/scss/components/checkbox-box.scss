@@ -1,0 +1,28 @@
+.checkbox-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__inp {
+    display: none;
+  }
+
+  &__check {
+    min-width: 16px;
+    height: 16px;
+    display: block;
+    border: 1px solid $border-light;
+    border-radius: 3px;
+  }
+
+  &__inp:checked + &__check {
+    background-image: url('../images/icons/check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__text {
+    font-size: 12px;
+    margin: 0;
+  }
+}
