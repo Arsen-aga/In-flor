@@ -12,7 +12,33 @@
   max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto;
+  position: relative;
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
 }
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+
+}
+
 
 .title-bold {
   @extend %roboto-700;
@@ -26,3 +52,33 @@
   margin-bottom: 45px;
 }
 
+@media (max-width: 992px) {
+  .title-bold {
+    font-size: 36px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .title {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 568px) {
+  h2.title-bold {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+}
+
+._main-btn {
+  @extend %btn;
+}
