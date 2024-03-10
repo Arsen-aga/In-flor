@@ -67,7 +67,7 @@
 @media (max-width: 768px) {
 
   .title {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 }
 
@@ -81,4 +81,20 @@
 
 ._main-btn {
   @extend %btn;
+}
+
+.visible-hand{
+  max-width: 42px;
+  margin: 0 auto;
+  display: none;
+}
+
+.tooltip-horizontal-scroll-icon_hand{
+  fill: $accent;
+}
+
+@media (max-width: 568px) {
+.visible-hand {
+    display: block;
+  }
 }

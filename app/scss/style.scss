@@ -56,7 +56,8 @@
   &__items {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
+    margin-top: -44px;
   }
 
   &__item {
@@ -65,7 +66,6 @@
     height: 100%;
     width: 100%;
     padding-top: 30px;
-    margin-top: -44px;
     background-color: #fff;
     border-radius: 50%;
     display: flex;
@@ -303,6 +303,7 @@
 
   &__item {
     display: block;
+    background-color: #fff;
     padding: 30px;
     box-shadow: $shadow;
     border-radius: 3px;
@@ -390,6 +391,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-color: #fff;
   }
 
   &__item-img {
@@ -621,7 +623,7 @@
     line-height: 0;
     transition: all .3s;
   }
-  
+
   &__item-bottom {
     background-color: $accent;
     border-radius: 3px;
@@ -663,10 +665,6 @@
 }
 
 @media (max-width: 1200px) {
-  .decor {
-    display: none;
-  }
-
   .guarantee {
     &__item {
       width: 100%;
@@ -675,8 +673,14 @@
 }
 
 @media (max-width: 992px) {
+  .decor {
+    display: none;
+  }
 
-  .phytowall-top,
+  .phytowall-top {
+    padding: 60px 0 100px;
+  }
+
   .section-2,
   .landscaping,
   .quality,
@@ -776,7 +780,8 @@
       font-size: 17px;
     }
   }
-  .questions{
+
+  .questions {
     padding-top: 60px;
   }
 }
@@ -830,7 +835,8 @@
       margin-bottom: 30px;
     }
   }
-  .questions{
+
+  .questions {
     padding-top: 30px;
   }
 }
@@ -858,6 +864,24 @@
     }
   }
 
+  .phytowall-bottom {
+    &__items {
+      gap: 50px 10px;
+    }
+
+    &__item {
+      max-width: 160px;
+    }
+
+    &__text {
+      width: 100%;
+
+      strong {
+        display: inline;
+      }
+    }
+  }
+
   .quality,
   .portfolio,
   .team {
@@ -867,8 +891,34 @@
     }
   }
 
+  div.landscaping-bottom,
+  .portfolio {
+    &__items {
+      grid-template-columns: repeat(6, minmax(320px, 1fr));
+      overflow: scroll;
+      padding-bottom: 15px;
+      gap: 20px;
+    }
+  }
+  .services{
+    &__title{
+      margin-bottom: 10px;
+    }
+  }
+
+  .quality,
+  .team {
+    &__items {
+      grid-template-columns: repeat(5, minmax(320px, 1fr));
+      padding-bottom: 15px;
+      gap: 20px;
+      overflow: scroll;
+    }
+  }
+
   .consultation {
-    background-image: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.93) 80.92%, rgba(255, 255, 255, 0) 100%),
+    padding-top: 30px;
+    background-image: linear-gradient(180deg, #FFFFFF 59%, rgba(255, 255, 255, 0.93) 72.92%, rgba(255, 255, 255, 0) 100%),
       url("../images/sec-7.webp");
 
     &__subtitle {
@@ -884,14 +934,15 @@
   }
 
   .advantages {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 
     &__items {
       overflow: auto;
+      padding-bottom: 15px;
     }
 
     &__item {
-      width: 600px;
+      width: 710px;
     }
   }
 
@@ -903,9 +954,30 @@
     }
   }
 
-  .questions{
-    &__item-top{
+  .questions {
+    &__item-top {
       gap: 25px;
+    }
+  }
+
+  .reviews {
+    &__title {
+      margin-bottom: 25px;
+    }
+  }
+
+  .guarantee {
+    &__subtitle {
+      font-size: 19px;
+    }
+    &__items{
+      gap: 15px;
+    }
+    &__item{
+      width: 47%;
+    }
+    &__item-text strong{
+      display: inline;
     }
   }
 }
