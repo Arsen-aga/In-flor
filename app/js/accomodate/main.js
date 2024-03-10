@@ -70,8 +70,12 @@ $(".reviews__slider").slick({
 
 if ($(".questions__item")) {
   $(".questions__item").on("click", function () {
-    $(".questions__item").removeClass("active");
-    $(this).toggleClass("active");
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+    } else {
+      $(".questions__item").removeClass("active");
+      $(this).addClass("active");
+    }
   });
 }
 

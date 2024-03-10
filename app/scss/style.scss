@@ -870,7 +870,8 @@
     }
 
     &__item {
-      max-width: 160px;
+      max-width: 145px;
+      padding-top: 25px;
     }
 
     &__text {
@@ -986,6 +987,7 @@
   .phytowall-top {
     &__buttons {
       flex-wrap: wrap;
+      gap: 10px;
     }
 
     &__btn {
